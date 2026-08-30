@@ -1,0 +1,629 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+ body {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     /* overflow: hidden; */
+     font-family: 'Montserrat', 'sanserif';
+ }
+
+
+
+ :root {
+     --corPrimeiroBotao: #EF9F27;
+     --corVerde: #1D5C54;
+ }
+
+
+ main {
+     display: flex;
+     justify-content: center;
+     min-height: 100vh;
+ }
+
+
+
+ .content {
+     /* background-color: black; */
+     width: 65%;
+ }
+
+ .contentFirstImage {
+     background-color: white;
+     height: 575px;
+     position: relative;
+     /* necessário para a imagem absoluta se posicionar corretamente */
+     overflow: hidden;
+     /* garante que nada vaze para fora do container */
+ }
+
+
+ .firstImage {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     /* 100% do container, não 100vw */
+     height: 575px;
+     /* preenche a altura do container (550px), não um valor fixo diferente */
+     object-fit: cover;
+     /* preenche o espaço todo, cortando o excesso, sem distorcer */
+     object-position: center;
+     /* centraliza o corte (ajuste se quiser focar em outra parte da foto) */
+     z-index: 1;
+     filter: brightness(75%);
+     /* removido o display: none, que estava escondendo a imagem */
+ }
+
+ .navBar,
+ .firstArticle {
+     position: relative;
+     z-index: 2;
+ }
+
+ .navBar {
+     /* background-color: blue; */
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 20px 7px 0px 40px;
+ }
+
+ .navLogo img {
+     width: 252px;
+ }
+
+ .navItens ul {
+     /* background-color: white; */
+     display: flex;
+     width: 300px;
+     flex-flow: row wrap;
+     gap: 40px;
+     margin: 0;
+     padding: 0;
+ }
+
+ .navItens li {
+     list-style: none;
+     font-size: 14pt;
+ }
+
+ .navItens>ul>li>a {
+     text-decoration: none;
+     color: white;
+     display: inline-block;
+     position: relative;
+
+     transition: color 0.3s ease, transform 0.3s ease;
+ }
+
+ .navItens>ul>li>a:hover {
+     color: #ff9a02;
+     transform: translateY(-2px);
+ }
+
+
+
+ .firstArticle {
+     /* background-color: purple; */
+     display: flex;
+     justify-content: flex-start;
+     padding: 10px 40px;
+     margin-top: 30px;
+ }
+
+
+ .textMain {
+     /* background-color: red; */
+     width: 400px;
+     display: flex;
+     flex-flow: column;
+     justify-content: center;
+     align-items: center;
+     gap: 2px;
+ }
+
+ .textMain h1 {
+     font-size: 30pt;
+     text-align: justify;
+     line-height: 1.1;
+     color: white;
+     margin-top: 40px;
+ }
+
+ .text-destaque {
+     color: var(--corPrimeiroBotao);
+ }
+
+ .textMain p {
+     text-align: justify;
+     color: white;
+     font-size: 14pt;
+     font-weight: 400;
+     margin-top: 0;
+     margin-bottom: 55px;
+ }
+
+ .buttonWhatsApp {
+     /* background-color: yellow; */
+     width: 100%;
+ }
+
+ .btn-whatsApp {
+     width: 100%;
+     height: 45px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 12px;
+     font-size: 12pt;
+     cursor: pointer;
+     background-color: transparent;
+     border-radius: 10px;
+     border: 2px solid var(--corPrimeiroBotao);
+     color: white;
+     font-weight: 600;
+     transition: all 0.3s ease;
+ }
+
+ .btn-whatsApp:hover {
+     transform: translate(2px, -4px);
+     background-color: #ef9f270c;
+ }
+
+ /* Parte do sobre */
+
+ .contenAbout {
+     margin-top: 20px;
+     padding: 10px;
+     padding-left: 40px;
+     display: flex;
+     justify-content: space-between;
+ }
+
+ .infoAbout {
+     width: 50%;
+ }
+
+ .infoAbout h5 {
+     font-size: 12pt;
+     background-color: rgba(239, 159, 39, 0.445);
+     border-radius: 15px;
+     width: 90px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 25px;
+     margin-bottom: 30px;
+ }
+
+ .infoAbout p {
+     text-align: justify;
+ }
+
+ .infoAbout h4 {
+     background-color: black;
+     margin-top: 50px;
+     border-radius: 10px;
+     color: white;
+     height: 50px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 14pt;
+
+
+ }
+
+ .imageAbout img {
+     width: 250px;
+     border-radius: 15px;
+     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.123);
+ }
+
+
+ /* Atuação */
+
+ #secondImagem {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     object-position: center;
+     z-index: 1;
+     filter: brightness(25%);
+
+ }
+
+
+ .contentAtuacao {
+     position: relative;
+     width: 100vw;
+     /* tira a seção de dentro dos 65% e referencia à tela */
+     left: 50%;
+     transform: translateX(-50%);
+     height: 550px;
+     margin-top: 50px;
+     overflow: hidden;
+     /* background-color: rgb(12, 12, 11); */
+ }
+
+ .performance {
+     position: relative;
+     width: 65%;
+     height: 100%;
+     margin: 0 auto;
+     padding: 50px 0;
+     color: white;
+     z-index: 2;
+ }
+
+ .performance>h5 {
+     background-color: red;
+     font-size: 12pt;
+     background-color: rgba(239, 159, 39, 0.445);
+     border-radius: 15px;
+     width: 90px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 25px;
+     margin-bottom: 30px;
+
+ }
+
+ .listPerfomance {
+     /* background-color: red; */
+     display: flex;
+     gap: 50px;
+     margin-top: 40px;
+ }
+
+ .perfomanceBalls {
+     display: flex;
+     /* border: 1px solid black; */
+     flex-flow: column;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .perfomanceBalls h4 {
+     background-color: var(--corVerde);
+     border-radius: 50%;
+     width: 50px;
+     height: 50px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: white;
+     font-size: 12pt;
+ }
+
+ .perfomanceBalls h5 {
+     color: white;
+ }
+
+ .perfomanceBalls p {
+     line-height: 0.7;
+     color: rgba(255, 255, 255, 0.685);
+ }
+
+ .listTopics {
+     /* background-color: #EF9F27; */
+     margin-top: 20px;
+ }
+
+ .listTopics ul {
+     list-style: none;
+ }
+
+ .listTopics li {
+     color: rgba(255, 255, 255, 0.685);
+ }
+
+ .listTopics i {
+     color: var(--corPrimeiroBotao);
+ }
+
+ .margem {
+     width: 60%;
+     color: white;
+ }
+
+ #address {
+     color: white;
+     list-style: none;
+     margin-left: 30px;
+ }
+
+ #address i {
+     color: var(--corPrimeiroBotao);
+ }
+
+ .footerlogo {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-top: 30px;
+ }
+
+ .footerlogo img {
+     width: 252px;
+
+ }
+
+ .footerlogo h4 {
+     font-size: 14pt;
+     padding-right: 20px;
+ }
+
+ .contentFooter p {
+     text-align: justify;
+
+ }
+
+
+ /* botao whatsApp */
+ .whatsapp-float {
+     position: fixed;
+     bottom: 35px;
+     right: 80px;
+     width: 60px;
+     height: 60px;
+     background-color: #25D366;
+     /* verde oficial do WhatsApp */
+     border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+     z-index: 999;
+     /* garante que fique acima de tudo, inclusive do header */
+     text-decoration: none;
+     transition: transform 0.2s ease, box-shadow 0.2s ease;
+ }
+
+ .whatsapp-float i {
+     color: white;
+     font-size: 20pt;
+ }
+
+ .whatsapp-float:hover {
+     transform: scale(1.08);
+     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+ }
+
+ @media screen and (max-width: 768px) {
+     .whatsapp-float {
+         position: fixed;
+         bottom: 35px;
+         right: 20px;
+         width: 60px;
+         height: 60px;
+         background-color: #25D366;
+         /* verde oficial do WhatsApp */
+         border-radius: 50%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+         z-index: 999;
+         /* garante que fique acima de tudo, inclusive do header */
+         text-decoration: none;
+         transition: transform 0.2s ease, box-shadow 0.2s ease;
+     }
+
+ }
+
+ /* ajuste fino pra mobile, botão um pouco menor */
+ @media (max-width: 480px) {
+     .whatsapp-float {
+         width: 50px;
+         height: 50px;
+         bottom: 15px;
+         right: 15px;
+     }
+
+     .whatsapp-float i {
+         font-size: 24pt;
+     }
+ }
+
+ /* evita rolagem horizontal causada pelos elementos 100vw */
+
+ /* ===================== TABLET (até 992px) ===================== */
+ @media (max-width: 992px) {
+     .content {
+         width: 90%;
+     }
+
+     .navBar {
+         padding: 20px 20px 0 20px;
+     }
+
+     .navLogo img {
+         width: 190px;
+     }
+
+     .navItens ul {
+         width: auto;
+         gap: 20px;
+     }
+
+     .navItens li {
+         font-size: 12pt;
+     }
+
+     .textMain {
+         width: 100%;
+         max-width: 450px;
+         padding: 0 10px;
+     }
+
+     .textMain h1 {
+         font-size: 26pt;
+     }
+
+     .contenAbout {
+         padding-left: 20px;
+     }
+
+     .imageAbout img {
+         width: 200px;
+     }
+
+     .performance {
+         width: 85%;
+     }
+ }
+
+ /* ===================== TABLET PEQUENO / CELULAR GRANDE (até 768px) ===================== */
+ @media (max-width: 768px) {
+
+     .contentFirstImage,
+     .firstImage {
+         height: 520px;
+
+         /* aumenta um pouco pq o conteúdo empilhado ocupa mais altura */
+     }
+
+     .firstImage {
+         filter: brightness(40%);
+     }
+
+     .navBar {
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 15px;
+         padding: 20px 15px 0 15px;
+     }
+
+     .navItens ul {
+         justify-content: center;
+         width: 100%;
+     }
+
+     .firstArticle {
+         justify-content: center;
+         padding: 10px 20px;
+         margin-top: 10px;
+     }
+
+     .textMain h1,
+     .textMain p {
+         text-align: left;
+         /* justify em coluna estreita fica com espaçamento estranho */
+     }
+
+     .textMain h1 {
+         margin-top: 20px;
+         font-size: 24pt;
+     }
+
+     /* Sobre: empilha ao invés de lado a lado */
+     .contenAbout {
+         flex-direction: column;
+         align-items: center;
+         text-align: left;
+         padding: 10px 20px;
+     }
+
+     .infoAbout {
+         width: 100%;
+     }
+
+     .infoAbout p {
+         text-align: left;
+     }
+
+     .imageAbout {
+         margin-top: 20px;
+     }
+
+     .imageAbout img {
+         width: 100%;
+         max-width: 300px;
+     }
+
+     /* Atuação */
+     .contentAtuacao {
+         height: auto;
+         padding: 40px 0;
+     }
+
+     .performance {
+         width: 90%;
+         padding: 10px 0;
+     }
+
+     .listPerfomance {
+         flex-wrap: wrap;
+         gap: 25px;
+         justify-content: center;
+         text-align: center;
+     }
+
+     .margem {
+         width: 90%;
+     }
+
+     #address {
+         margin-left: 0;
+     }
+
+     .footerlogo {
+         flex-direction: column;
+         gap: 10px;
+         text-align: center;
+     }
+ }
+
+ /* ===================== CELULAR (até 480px) ===================== */
+ @media (max-width: 480px) {
+
+     .contentFirstImage,
+     .firstImage {
+         height: 680px;
+     }
+
+     .navLogo img {
+         width: 160px;
+     }
+
+     .navItens li {
+         font-size: 11pt;
+     }
+
+     .textMain h1 {
+         font-size: 20pt;
+     }
+
+     .textMain p {
+         font-size: 12pt;
+     }
+
+     .btn-whatsApp {
+         font-size: 11pt;
+     }
+
+     .infoAbout h1 {
+         font-size: 22pt;
+     }
+
+     .infoAbout h4 {
+         font-size: 12pt;
+         text-align: center;
+     }
+
+     .performance h1 {
+         font-size: 20pt;
+     }
+
+     .perfomanceBalls {
+         width: 45%;
+         /* 2 por linha em vez de 3 espremidos */
+     }
+ }
