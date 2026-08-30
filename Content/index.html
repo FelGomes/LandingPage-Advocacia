@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advogada</title>
+    <link rel="shortcut icon" href="../Images/advocacia.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -104,7 +105,18 @@
         .navItens>ul>li>a {
             text-decoration: none;
             color: white;
+            display: inline-block;
+            position: relative;
+
+            transition: color 0.3s ease, transform 0.3s ease;
         }
+
+        .navItens>ul>li>a:hover {
+            color: #ff9a02;
+            transform: translateY(-2px);
+        }
+
+
 
         .firstArticle {
             /* background-color: purple; */
@@ -165,6 +177,12 @@
             border: 2px solid var(--corPrimeiroBotao);
             color: white;
             font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-whatsApp:hover {
+            transform: translate(2px, -4px);
+            background-color: #ef9f270c;
         }
 
         /* Parte do sobre */
@@ -214,6 +232,7 @@
         .imageAbout img {
             width: 250px;
             border-radius: 15px;
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.123);
         }
 
 
@@ -359,6 +378,73 @@
 
         }
 
+
+        /* botao whatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 35px;
+            right: 80px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            /* verde oficial do WhatsApp */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            z-index: 999;
+            /* garante que fique acima de tudo, inclusive do header */
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .whatsapp-float i {
+            color: white;
+            font-size: 20pt;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        @media screen and (max-width: 768px) {
+            .whatsapp-float {
+                position: fixed;
+                bottom: 35px;
+                right: 20px;
+                width: 60px;
+                height: 60px;
+                background-color: #25D366;
+                /* verde oficial do WhatsApp */
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+                z-index: 999;
+                /* garante que fique acima de tudo, inclusive do header */
+                text-decoration: none;
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+
+        }
+
+        /* ajuste fino pra mobile, botão um pouco menor */
+        @media (max-width: 480px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 15px;
+                right: 15px;
+            }
+
+            .whatsapp-float i {
+                font-size: 24pt;
+            }
+        }
+
         /* evita rolagem horizontal causada pelos elementos 100vw */
 
         /* ===================== TABLET (até 992px) ===================== */
@@ -413,7 +499,7 @@
             .contentFirstImage,
             .firstImage {
                 height: 520px;
-                
+
                 /* aumenta um pouco pq o conteúdo empilhado ocupa mais altura */
             }
 
@@ -483,7 +569,7 @@
 
             .performance {
                 width: 90%;
-                padding: 30px 0;
+                padding: 10px 0;
             }
 
             .listPerfomance {
@@ -577,14 +663,14 @@
 
                     <div class="navItens">
                         <ul>
-                            <li><a href="">Home</a></li>
-                            <li><a href="">Sobre</a></li>
-                            <li><a href="">Atuação</a></li>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#sobre">Sobre</a></li>
+                            <li><a href="#atuacao">Atuação</a></li>
                         </ul>
                     </div>
                 </div>
 
-                <article class="firstArticle">
+                <article id="home" class="firstArticle">
                     <div class="textMain">
                         <h1>Seu direito não é <span class="text-destaque">negociável.</span></h1>
                         <p>Informação, estratégia e defesa para que você não precise enfrentar sozinho(a) uma situação
@@ -592,7 +678,9 @@
                             os seus direitos.</p>
 
                         <div class="buttonWhatsApp">
-                            <button type="button" class="btn-whatsApp"><i class="bi bi-whatsapp fs-4"></i>Falar agora no
+                            <button type="button" class="btn-whatsApp"
+                                onclick="window.open('https://wa.me/556291803495?text=Olá! Gostaria de mais informações sobre a consultoria.')"><i
+                                    class="bi bi-whatsapp fs-4"></i>Falar agora no
                                 WhatsApp</button>
                         </div>
                     </div>
@@ -602,7 +690,7 @@
             <!-- Imagem de fundo -->
 
             <!-- Sobre -->
-            <div class="contenAbout">
+            <div id="sobre" class="contenAbout">
                 <div class="infoAbout">
                     <h5>Sobre</h5>
 
@@ -628,7 +716,7 @@
 
             <!-- Atuacao -->
 
-            <div class="contentAtuacao">
+            <div id="atuacao" class="contentAtuacao">
                 <img id="secondImagem" src="../Images/adovgada.png" alt="fundoJuridico">
 
                 <div id="atuacao" class="performance">
@@ -689,6 +777,11 @@
                 <hr>
                 <p class="text-center">© 2026 Marília Gabriella Advocacia. Todos os direitos reservados.</p>
             </div>
+
+            <a href="https://wa.me/556291803495?text=Olá! Gostaria de mais informações sobre a consultoria."
+                class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">
+                <i class="bi bi-whatsapp"></i>
+            </a>
 
         </div>
 
