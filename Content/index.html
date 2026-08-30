@@ -62,7 +62,7 @@
             object-position: center;
             /* centraliza o corte (ajuste se quiser focar em outra parte da foto) */
             z-index: 1;
-            filter: brightness(40%);
+            filter: brightness(75%);
             /* removido o display: none, que estava escondendo a imagem */
         }
 
@@ -128,7 +128,7 @@
             text-align: justify;
             line-height: 1.1;
             color: white;
-            margin-top: 20px;
+            margin-top: 40px;
         }
 
         .text-destaque {
@@ -163,6 +163,58 @@
             border: 2px solid var(--corPrimeiroBotao);
             color: white;
             font-weight: 600;
+        }
+
+        /* Parte do sobre */
+        
+        .contenAbout {
+            margin-top: 20px;
+            padding: 10px;
+            padding-left: 40px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .infoAbout {
+            width: 50%;
+        }
+
+        .infoAbout h5 {
+            font-size: 12pt;
+            background-color: rgba(239, 159, 39, 0.445);
+            border-radius: 15px;
+            width: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 25px;
+            margin-bottom: 30px;
+        }
+
+        .infoAbout p {
+            text-align: justify;
+        }
+
+        .infoAbout h4 {
+            background-color: black;
+            margin-top: 50px;
+            border-radius: 10px;
+            color: white;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16pt;
+
+
+        }
+
+
+
+
+        .imageAbout img {
+            width: 250px;
+            border-radius: 15px;
         }
     </style>
 
@@ -209,12 +261,31 @@
 
                 </article>
             </div>
+            <!-- Imagem de fundo -->
 
 
+            <div class="contenAbout">
+                <div class="infoAbout">
+                    <h5>Sobre</h5>
+
+                    <h1>Marília Gabriela</h1>
+                    <p>Advogada com atuação exclusiva em Direito do Trabalho, ajudo trabalhadores a compreenderem seus direitos e a buscarem a proteção jurídica adequada em cada situação.</p>
+
+                    <p>Se você foi demitido, não recebeu corretamente suas verbas, trabalhou sem registro, sofreu situações abusivas ou acredita que algum direito trabalhista foi violado, não tome decisões antes de entender o que a lei garante a você.</p>
+
+                    <h4>OAB • Advocacia e Assessoria Jurídica </h4>
+                </div>
+
+                <div class="imageAbout">
+                    <img src="../Images/fotoAdvogada.jpeg" alt="foto advogada">
+                </div>
+                
+
+            </div>
 
         </div>
 
-        <!-- Imagem de fundo -->
+
 
 
 
