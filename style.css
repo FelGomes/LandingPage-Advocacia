@@ -401,7 +401,7 @@
          position: fixed;
          bottom: 35px;
          right: 20px;
-         width: 60px;
+         width: 30px;
          height: 60px;
          background-color: #25D366;
          /* verde oficial do WhatsApp */
@@ -421,7 +421,7 @@
  /* ajuste fino pra mobile, botão um pouco menor */
  @media (max-width: 480px) {
      .whatsapp-float {
-         width: 50px;
+         width: 30px;
          height: 50px;
          bottom: 15px;
          right: 15px;
