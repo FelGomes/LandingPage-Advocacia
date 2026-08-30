@@ -485,7 +485,7 @@
 
      .contentFirstImage,
      .firstImage {
-         height: 520px;
+         height: 450px;
 
          /* aumenta um pouco pq o conteúdo empilhado ocupa mais altura */
      }
