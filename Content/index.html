@@ -16,6 +16,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            /* overflow: hidden; */
             font-family: 'Montserrat', 'sanserif';
         }
 
@@ -23,6 +24,7 @@
 
         :root {
             --corPrimeiroBotao: #EF9F27;
+            --corVerde: #1D5C54;
         }
 
 
@@ -36,7 +38,7 @@
 
         .content {
             /* background-color: black; */
-            width: 75%;
+            width: 65%;
         }
 
         .contentFirstImage {
@@ -139,7 +141,7 @@
             text-align: justify;
             color: white;
             font-size: 14pt;
-            font-weight: 300;
+            font-weight: 400;
             margin-top: 0;
             margin-bottom: 55px;
         }
@@ -166,7 +168,7 @@
         }
 
         /* Parte do sobre */
-        
+
         .contenAbout {
             margin-top: 20px;
             padding: 10px;
@@ -209,12 +211,138 @@
 
         }
 
-
-
-
         .imageAbout img {
             width: 250px;
             border-radius: 15px;
+        }
+
+
+        /* Atuação */
+
+        #secondImagem {
+            width: 100vw;
+            max-width: 100vw;
+            position: relative;
+            height: 500px;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            display: block;
+            object-fit: contain;
+        }
+
+
+        .contentAtuacao {
+            /* background-color: black; */
+            margin-top: 50px;
+            padding: 10px;
+            padding-left: 40px;
+            /* background-color: rgb(12, 12, 11); */
+        }
+
+        .performance>h5 {
+            background-color: red;
+            font-size: 12pt;
+            background-color: rgba(239, 159, 39, 0.445);
+            border-radius: 15px;
+            width: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 25px;
+            margin-bottom: 30px;
+
+        }
+
+        .listPerfomance {
+            /* background-color: red; */
+            display: flex;
+            gap: 50px;
+            margin-top: 40px;
+        }
+
+        .perfomanceBalls {
+            display: flex;
+            /* border: 1px solid black; */
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .perfomanceBalls h4 {
+            background-color: var(--corVerde);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 12pt;
+        }
+
+        .perfomanceBalls h5 {
+            color: white;
+        }
+
+        .perfomanceBalls p {
+            line-height: 0.7;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .listTopics {
+            /* background-color: #EF9F27; */
+            margin-top: 20px;
+        }
+
+        .listTopics ul {
+            list-style: none;
+        }
+
+        .listTopics li {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .listTopics i {
+            color: var(--corPrimeiroBotao);
+        }
+
+        .margem {
+            width: 60%;
+            color: white;
+        }
+
+        #address {
+            color: white;
+            list-style: none;
+            margin-left: 30px;
+        }
+
+        #address i {
+            color: var(--corPrimeiroBotao);
+        }
+
+        .footerlogo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .footerlogo img {
+            width: 252px;
+
+        }
+
+        .footerlogo h4 {
+            font-size: 14pt;
+            padding-right: 20px;
+        }
+
+        .contentFooter p {
+            text-align: justify;
+
         }
     </style>
 
@@ -263,15 +391,18 @@
             </div>
             <!-- Imagem de fundo -->
 
-
+            <!-- Sobre -->
             <div class="contenAbout">
                 <div class="infoAbout">
                     <h5>Sobre</h5>
 
                     <h1>Marília Gabriela</h1>
-                    <p>Advogada com atuação exclusiva em Direito do Trabalho, ajudo trabalhadores a compreenderem seus direitos e a buscarem a proteção jurídica adequada em cada situação.</p>
+                    <p>Advogada com atuação exclusiva em Direito do Trabalho, ajudo trabalhadores a compreenderem seus
+                        direitos e a buscarem a proteção jurídica adequada em cada situação.</p>
 
-                    <p>Se você foi demitido, não recebeu corretamente suas verbas, trabalhou sem registro, sofreu situações abusivas ou acredita que algum direito trabalhista foi violado, não tome decisões antes de entender o que a lei garante a você.</p>
+                    <p>Se você foi demitido, não recebeu corretamente suas verbas, trabalhou sem registro, sofreu
+                        situações abusivas ou acredita que algum direito trabalhista foi violado, não tome decisões
+                        antes de entender o que a lei garante a você.</p>
 
                     <h4>OAB • Advocacia e Assessoria Jurídica </h4>
                 </div>
@@ -279,8 +410,74 @@
                 <div class="imageAbout">
                     <img src="../Images/fotoAdvogada.jpeg" alt="foto advogada">
                 </div>
-                
 
+
+            </div>
+
+
+
+            <!-- Atuacao -->
+
+            <div class="contentAtuacao">
+                <img id="secondImagem" src="../Images/advocacia.jpeg" alt="fundoJuridico">
+
+                <div id="atuacao" class="performance">
+
+                    <h5>Atuação</h5>
+                    <h1>O que <span class="text-destaque">fazemos</span> por você?</h1>
+
+                    <div class="listPerfomance">
+                        <div class="perfomanceBalls">
+                            <h4>1</h4>
+                            <h5>Conversa Inicial</h5>
+                            <p>Você conta seu caso, sem custo</p>
+                        </div>
+
+                        <div class="perfomanceBalls">
+                            <h4>2</h4>
+                            <h5>Análise do caso</h5>
+                            <p>Avaliação jurídica detalhada</p>
+                        </div>
+
+                        <div class="perfomanceBalls">
+                            <h4>3</h4>
+                            <h5>Ação Judicial</h5>
+                            <p>Acompanhamento até o fim</p>
+                        </div>
+                    </div>
+
+                    <div class="listTopics">
+                        <ul>
+                            <li><i class="bi bi-clock fs-5"></i>&nbsp; Resposta em até 24h </li>
+                            <li><i class="bi bi-headset fs-5"></i>&nbsp; Atendimento online e presencial </li>
+                            <li><i class="bi bi-bank2 fs-5"></i>&nbsp; OAB/GO: nº 78930</li>
+
+                        </ul>
+                    </div>
+
+                    <hr class="margem">
+
+                    <li id="address"><i class="bi bi-geo-alt-fill fs-5"></i> Rua Argemiro Nepomuceno de Souza, Rialma -
+                        Goias, CEP: 76310-000</li>
+
+                </div>
+
+            </div>
+
+
+            <div class="contentFooter">
+                <div class="footerlogo">
+                    <img src="../Images/LogoPreta.png" alt="logo">
+
+                    <h4>Política de privacidade</h4>
+                </div>
+
+                <p class="mt-3">Marília Gabriella — Advocacia e Assessoria Jurídica · OAB. Este site tem caráter
+                    meramente informativo, em conformidade com o Código de Ética e Disciplina da OAB e o Provimento nº
+                    205/2021. Não constitui oferta de serviços, captação de clientela nem garantia de resultados.</p>
+
+                <hr>
+                <p class="text-center">© 2026 Marília Gabriella Advocacia. Todos os direitos reservados.</p>
             </div>
 
         </div>
