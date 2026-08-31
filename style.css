@@ -288,6 +288,7 @@ main {
     flex-flow: column;
     justify-content: center;
     align-items: center;
+    width: 300px;
 }
 
 .perfomanceBalls h4 {
@@ -307,7 +308,7 @@ main {
 }
 
 .perfomanceBalls p {
-    line-height: 0.8;
+    line-height: 1.2;
     color: rgba(255, 255, 255, 0.685);
 }
 
