@@ -574,7 +574,7 @@ main {
 
     .listPerfomance {
         flex-wrap: wrap;
-        gap: 25px;
+        gap: 55px;
         justify-content: center;
         text-align: center;
     }
